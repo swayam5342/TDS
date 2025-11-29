@@ -25,7 +25,7 @@ load_dotenv()
 
 app = FastAPI()
 SECRET = os.getenv("secret")
-
+KEY=os.getenv("key")
 
 class req(BaseModel):
     url: str
@@ -64,7 +64,7 @@ class Test(BaseModel):
 llm = ChatGoogleGenerativeAI(
     model="gemini-2.5-flash",
     temperature=0,
-    api_key="AIzaSyBQTODNnXuATsE1T1Zt2dVxNYtOnkyr4jI"
+    api_key=KEY
 )
 
 
